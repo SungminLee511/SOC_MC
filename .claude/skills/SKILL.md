@@ -12,7 +12,11 @@ SOC_MC/
 │   ├── base.py               # CategoryASampler ABC (Trajectories, loss, sample)
 │   ├── networks.py           # FourierMLP + TimeEmbed (controller network)
 │   ├── sde.py                # VESDE + ControlledSDE + sdeint (Euler-Maruyama)
+│   ├── adjoint_sampling.py   # AdjointSampling (AS) — boundary-only VE-SDE
+│   ├── asbs.py               # ASBS — corrector + adjoint matching (IPF-style)
 │   ├── configs/              # YAML model configs
+│   │   ├── as_default.yaml
+│   │   └── asbs_default.yaml
 ├── benchmark/                # Energy functions + configs
 │   ├── __init__.py
 │   ├── base.py               # EnergyFunction ABC + RestrictedEnergyFunction + _gmm_energy()
@@ -78,6 +82,17 @@ AS and ASBS implementations ported from `/home/sky/SML/Stein_ASBS/adjoint_sample
 - `VESDE(sigma_min, sigma_max)` — VE-SDE, g(t) = σ_min*(σ_max/σ_min)^(1-t)*sqrt(2*log(ratio))
 - `ControlledSDE(ref_sde, controller)` — drift = b(t,x) + g²*u_θ(t,x)
 - `sdeint(sde, state0, timesteps, return_all)` — Euler-Maruyama integrator
+
+## Sampler Implementations
+- **AdjointSampling** (model/adjoint_sampling.py)
+  - VE-SDE efficient: adjoint constant in time, boundary-only sampling
+  - `.train_step(batch_size, energy_fn, device)` → loss scalar
+  - Target: -[∇E(x1) + ∇log p^base_1(x1)], regress at random t via bridge posterior
+- **ASBS** (model/asbs.py)
+  - Corrector network learns bridge score, replaces analytic base-score
+  - `.train_step(batch_size, energy_fn, device, step_type="adjoint"|"corrector")` → loss
+  - `.set_init_stage(bool)` — toggle IPF init (zero corrector) vs iterative
+  - `state_dict()`/`load_state_dict()` saves both controller + corrector
 
 ## Conventions
 - Experiment config naming: `{goal}_{sampler}_{benchmark}_{subset}_{stage}_seed{n}.yaml`

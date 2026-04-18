@@ -1,0 +1,25 @@
+sampler: asbs
+dim: 2
+n_timesteps: 100
+controller:
+  hidden_dims: [128, 128, 128, 128]
+  channels: 128
+  activation: silu
+  time_embed_dim: 64
+corrector:
+  hidden_dims: [128, 128, 128, 128]
+  channels: 128
+  activation: silu
+  time_embed_dim: 64
+diffusion:
+  sigma_min: 0.01
+  sigma_max: 3.0
+optimizer:
+  name: adam
+  lr: 1.0e-4
+training:
+  batch_size: 256
+  clip_grad_norm: 1.0
+  corrector_steps_per_epoch: 1
+  adjoint_steps_per_epoch: 1
+  ipf_init_epochs: 50
