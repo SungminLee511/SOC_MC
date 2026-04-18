@@ -9,6 +9,9 @@ Verify theoretical predictions (P1-P6) about mode collapse in category (a) SOC s
 SOC_MC/
 ├── model/                    # Architectures + training
 │   ├── __init__.py
+│   ├── base.py               # CategoryASampler ABC (Trajectories, loss, sample)
+│   ├── networks.py           # FourierMLP + TimeEmbed (controller network)
+│   ├── sde.py                # VESDE + ControlledSDE + sdeint (Euler-Maruyama)
 │   ├── configs/              # YAML model configs
 ├── benchmark/                # Energy functions + configs
 │   ├── __init__.py
@@ -63,6 +66,18 @@ AS and ASBS implementations ported from `/home/sky/SML/Stein_ASBS/adjoint_sample
 - `.K`, `.dim`, `.mode_weights`, `.mode_centers` — properties
 - `_gmm_energy()` — shared log-sum-exp GMM energy (handles diagonal + full cov)
 - `RestrictedEnergyFunction` — wraps parent with renormalized subset weights
+
+## Model API (model/)
+- `CategoryASampler(config)` — ABC base, holds controller + VESDE + ControlledSDE
+- `.sample_trajectories(batch_size)` → Trajectories (states list, timesteps, terminal)
+- `.sample(batch_size)` → (B, D) terminal points only
+- `.compute_target(trajs, energy_fn)` — abstract, subclass-specific
+- `.loss(trajs, energy_fn)` → scalar L2 residual loss
+- `FourierMLP(dim, hidden_dims, channels, activation, time_embed_dim)` — controller net
+  - Forward: `(t, x) -> (B, dim)`, additive time+space embedding
+- `VESDE(sigma_min, sigma_max)` — VE-SDE, g(t) = σ_min*(σ_max/σ_min)^(1-t)*sqrt(2*log(ratio))
+- `ControlledSDE(ref_sde, controller)` — drift = b(t,x) + g²*u_θ(t,x)
+- `sdeint(sde, state0, timesteps, return_all)` — Euler-Maruyama integrator
 
 ## Conventions
 - Experiment config naming: `{goal}_{sampler}_{benchmark}_{subset}_{stage}_seed{n}.yaml`
