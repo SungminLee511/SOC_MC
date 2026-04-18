@@ -14,6 +14,7 @@ SOC_MC/
 │   ├── sde.py                # VESDE + ControlledSDE + sdeint (Euler-Maruyama)
 │   ├── adjoint_sampling.py   # AdjointSampling (AS) — boundary-only VE-SDE
 │   ├── asbs.py               # ASBS — corrector + adjoint matching (IPF-style)
+│   ├── train.py              # Shared training entry point (--exp_config)
 │   ├── configs/              # YAML model configs
 │   │   ├── as_default.yaml
 │   │   └── asbs_default.yaml
@@ -28,13 +29,15 @@ SOC_MC/
 │   │   ├── c5.yaml
 │   │   └── b5.yaml
 ├── result/                   # Checkpoints, logs, experiment configs
-│   ├── experiments/          # One YAML per experiment
+│   ├── experiments/          # One YAML per experiment (templates included)
 │   ├── checkpoints/          # Model checkpoints (subdirs)
 │   └── logs/                 # Training CSV logs
 ├── evaluation/               # Metric/figure scripts
 │   ├── __init__.py
 │   ├── utils/
-│   │   └── __init__.py
+│   │   ├── __init__.py
+│   │   ├── checkpoint_loader.py  # load_checkpoint(), load_sampler_from_checkpoint()
+│   │   └── trajectory_sampler.py # sample_from_checkpoint(), sample_trajectories_from_checkpoint()
 │   ├── figures/              # Generated figures
 │   └── tables/               # Generated tables
 ├── requirements.txt
@@ -93,6 +96,20 @@ AS and ASBS implementations ported from `/home/sky/SML/Stein_ASBS/adjoint_sample
   - `.train_step(batch_size, energy_fn, device, step_type="adjoint"|"corrector")` → loss
   - `.set_init_stage(bool)` — toggle IPF init (zero corrector) vs iterative
   - `state_dict()`/`load_state_dict()` saves both controller + corrector
+
+## Training (model/train.py)
+- Entry: `python model/train.py --exp_config <path.yaml>`
+- Handles AS + ASBS, subset restriction, checkpoint init, noise injection
+- ASBS: alternates corrector/adjoint steps, IPF init stage toggle
+- Logging: CSVLogger (train/eval/checkpoint events)
+- Eval: mode_assignment on 10k samples → α_k, MWD
+- Registries: SAMPLER_REGISTRY, BENCHMARK_REGISTRY (add new samplers/benchmarks here)
+
+## Evaluation Utils
+- `load_checkpoint(exp_id, epoch)` → (state_dict, config)
+- `load_sampler_from_checkpoint(exp_id, epoch)` → (sampler, config)
+- `sample_from_checkpoint(exp_id, n_samples)` → (n, D) terminal points
+- `sample_trajectories_from_checkpoint(exp_id, n_samples)` → Trajectories
 
 ## Conventions
 - Experiment config naming: `{goal}_{sampler}_{benchmark}_{subset}_{stage}_seed{n}.yaml`
