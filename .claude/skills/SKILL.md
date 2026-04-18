@@ -12,7 +12,14 @@ SOC_MC/
 │   ├── configs/              # YAML model configs
 ├── benchmark/                # Energy functions + configs
 │   ├── __init__.py
+│   ├── base.py               # EnergyFunction ABC + RestrictedEnergyFunction + _gmm_energy()
+│   ├── w5.py                 # W5Energy — geometric decay weights
+│   ├── c5.py                 # C5Energy — heterogeneous covariances
+│   ├── b5.py                 # B5Energy — cluster+isolated barrier layout
 │   ├── configs/              # YAML benchmark configs
+│   │   ├── w5.yaml
+│   │   ├── c5.yaml
+│   │   └── b5.yaml
 ├── result/                   # Checkpoints, logs, experiment configs
 │   ├── experiments/          # One YAML per experiment
 │   ├── checkpoints/          # Model checkpoints (subdirs)
@@ -44,6 +51,18 @@ AS and ASBS implementations ported from `/home/sky/SML/Stein_ASBS/adjoint_sample
 | W5 | 5 | Weight imbalance | Geometric decay weights r=0.5 |
 | C5 | 5 | Covariance heterogeneity | Wide/tight/anisotropic modes |
 | B5 | 5 | Barrier heterogeneity | Cluster(1-3) + isolated(4,5) |
+
+## Benchmark API (benchmark/base.py)
+- `EnergyFunction(config)` — ABC, takes YAML config dict
+- `.energy(x)` → (B,) — E(x) = -log p(x) + const
+- `.gradient(x)` → (B, D) — ∇E via autograd
+- `.score(x)` → (B, D) — -∇E
+- `.restricted(subset_S)` → new EnergyFunction for p_S (0-indexed mode list)
+- `.mode_assignment(x)` → (B,) int — nearest-center assignment
+- `.get_ref_samples(n)` → (n, D) — ancestral sampling
+- `.K`, `.dim`, `.mode_weights`, `.mode_centers` — properties
+- `_gmm_energy()` — shared log-sum-exp GMM energy (handles diagonal + full cov)
+- `RestrictedEnergyFunction` — wraps parent with renormalized subset weights
 
 ## Conventions
 - Experiment config naming: `{goal}_{sampler}_{benchmark}_{subset}_{stage}_seed{n}.yaml`

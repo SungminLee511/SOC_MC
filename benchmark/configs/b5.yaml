@@ -1,0 +1,17 @@
+benchmark: B5
+K: 5
+dim: 2
+mode_positions:
+  type: cluster_isolated
+  cluster:
+    - [-3, 0]
+    - [0, 0]
+    - [3, 0]
+  isolated:
+    - [0, 12]
+    - [0, -12]
+mode_covariance:
+  type: isotropic
+  sigma: 0.8
+mode_weights:
+  type: equal

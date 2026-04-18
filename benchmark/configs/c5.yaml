@@ -1,0 +1,12 @@
+benchmark: C5
+K: 5
+dim: 2
+mode_positions:
+  type: regular_pentagon
+  radius: 8.0
+mode_covariance:
+  type: heterogeneous
+  sigma_wide: 0.8
+  sigma_tight: 0.15
+mode_weights:
+  type: equal
