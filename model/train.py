@@ -190,10 +190,17 @@ def train(exp_config_path: str):
     sampler = sampler.to(device)
 
     # ── Optimizer ──
-    optimizer = build_optimizer(sampler, model_cfg)
+    # Allow experiment config to override optimizer settings
+    exp_opt = exp_cfg.get("optimizer", {})
+    if exp_opt.get("name"):
+        # Build from experiment config override
+        override_cfg = {"optimizer": exp_opt}
+        optimizer = build_optimizer(sampler, override_cfg)
+    else:
+        optimizer = build_optimizer(sampler, model_cfg)
 
     # Override LR if experiment config specifies it
-    exp_lr = exp_cfg.get("optimizer", {}).get("lr", None)
+    exp_lr = exp_opt.get("lr", None) or exp_cfg.get("training", {}).get("override_lr", None)
     if exp_lr is not None:
         for pg in optimizer.param_groups:
             pg["lr"] = exp_lr
@@ -216,8 +223,24 @@ def train(exp_config_path: str):
 
     # ── Training config ──
     train_cfg = model_cfg.get("training", {})
-    batch_size = train_cfg.get("batch_size", 256)
+    # Allow experiment config to override batch_size
+    exp_train = exp_cfg.get("training", {})
+    batch_size = exp_train.get("batch_size", train_cfg.get("batch_size", 256))
     clip_grad = train_cfg.get("clip_grad_norm", None)
+
+    # ── Learning rate schedule ──
+    schedule_name = exp_train.get("schedule", "constant").lower()
+    if schedule_name == "cosine":
+        scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=n_epochs)
+    elif schedule_name == "warmup":
+        warmup_epochs = max(1, n_epochs // 10)
+        def warmup_lambda(epoch):
+            if epoch < warmup_epochs:
+                return epoch / warmup_epochs
+            return 1.0
+        scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, warmup_lambda)
+    else:
+        scheduler = None
 
     # ASBS-specific
     is_asbs = isinstance(sampler, ASBS)
@@ -281,6 +304,10 @@ def train(exp_config_path: str):
             ckpt_path = os.path.join(ckpt_dir, f"epoch_{epoch+1}.pt")
             torch.save(sampler.state_dict(), ckpt_path)
             logger.log_checkpoint(epoch, f"saved {ckpt_path}")
+
+        # Step LR scheduler
+        if scheduler is not None:
+            scheduler.step()
 
         # Print progress
         if (epoch + 1) % 50 == 0:
