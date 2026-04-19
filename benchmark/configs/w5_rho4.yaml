@@ -1,0 +1,12 @@
+benchmark: W5
+K: 5
+dim: 2
+mode_positions:
+  type: regular_pentagon
+  radius: 6.81
+mode_covariance:
+  type: isotropic
+  sigma: 0.8
+mode_weights:
+  type: geometric_decay
+  r: 0.5

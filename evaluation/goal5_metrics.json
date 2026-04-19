@@ -1,0 +1,11 @@
+{
+  "n_checkpoints": 13,
+  "n_total_runs": 520,
+  "n_missing": 0,
+  "n_escape": 24,
+  "n_no_escape": 496,
+  "n_oscillation": 0,
+  "n_checkpoints_with_eta_star": 1,
+  "mean_ratio_eta_star_over_eta_th": 0.25,
+  "median_ratio_eta_star_over_eta_th": 0.25
+}

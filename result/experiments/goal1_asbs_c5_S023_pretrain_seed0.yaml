@@ -1,0 +1,24 @@
+benchmark:
+  config: benchmark/configs/c5.yaml
+goal: 1
+init:
+  from_checkpoint: null
+  noise_level: 0.0
+logging:
+  checkpoint_every: 500
+  eval_every: 0
+  n_eval_samples: 10000
+model:
+  config: model/configs/asbs_default.yaml
+n_epochs: 500
+output:
+  checkpoint_dir: result/checkpoints/goal1_asbs_c5_S023_pretrain_seed0/
+  log_file: result/logs/goal1_asbs_c5_S023_pretrain_seed0.csv
+seed: 0
+stage: pretrain
+subset:
+  S:
+  - 0
+  - 2
+  - 3
+  full_target: false

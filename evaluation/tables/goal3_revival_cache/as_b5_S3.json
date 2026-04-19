@@ -1,0 +1,11 @@
+{
+  "sampler": "as",
+  "benchmark": "b5",
+  "subset": "S3",
+  "L_S_star": 0.4332166,
+  "p_stab": 0.6,
+  "lambda_min_full": -2.564316272735596,
+  "lambda_min_rev": NaN,
+  "revival_dim": 0,
+  "n_revival_dirs": 0
+}

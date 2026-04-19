@@ -1,0 +1,11 @@
+{
+  "sampler": "asbs",
+  "benchmark": "c5",
+  "subset": "S1",
+  "L_S_star": 0.4184397000000001,
+  "p_stab": 1.0,
+  "lambda_min_full": -41.52306365966797,
+  "lambda_min_rev": NaN,
+  "revival_dim": 0,
+  "n_revival_dirs": 0
+}

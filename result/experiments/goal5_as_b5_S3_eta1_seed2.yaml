@@ -1,0 +1,30 @@
+goal: 5
+stage: escape
+seed: 2
+n_epochs: 300
+
+model:
+  config: model/configs/as_default.yaml
+
+benchmark:
+  config: benchmark/configs/b5.yaml
+
+subset:
+  S: [3]
+  full_target: true
+
+init:
+  from_checkpoint: result/checkpoints/goal1_as_b5_S3_pretrain_seed0/epoch_500.pt
+  noise_level: 0.0
+
+training:
+  override_lr: 0.0005745580209618292
+
+logging:
+  checkpoint_every: 300
+  eval_every: 20
+  n_eval_samples: 10000
+
+output:
+  checkpoint_dir: result/checkpoints/goal5_as_b5_S3_eta1_seed2/
+  log_file: result/logs/goal5_as_b5_S3_eta1_seed2.csv

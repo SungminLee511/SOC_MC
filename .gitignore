@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+result/checkpoints/
+result/nohup_logs/
+run_*.sh
+nohup.out

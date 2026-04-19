@@ -1,0 +1,432 @@
+[17:43:57] Device: cuda
+============================================================
+GOAL 3 STAGE 3: REVIVAL-SUBSPACE PROJECTION
+============================================================
+Checkpoints: 55
+
+  [1/55] as/w5/S2 (L*=0.3631, lambda_min=-2.2729)
+      CACHED: revival_dim=0, lambda_min_rev=nan
+
+  [2/55] as/w5/S1 (L*=0.3745, lambda_min=-9.5725)
+      CACHED: revival_dim=0, lambda_min_rev=nan
+
+  [3/55] as/w5/S0 (L*=0.4177, lambda_min=-4.3458)
+      CACHED: revival_dim=0, lambda_min_rev=nan
+
+  [4/55] as/w5/S14 (L*=0.6271, lambda_min=-1.7546)
+      CACHED: revival_dim=0, lambda_min_rev=nan
+
+  [5/55] as/w5/S24 (L*=0.6359, lambda_min=-2.2687)
+      CACHED: revival_dim=0, lambda_min_rev=nan
+
+  [6/55] as/w5/S014 (L*=0.6361, lambda_min=-3.7570)
+      CACHED: revival_dim=0, lambda_min_rev=nan
+
+  [7/55] as/w5/S03 (L*=0.6368, lambda_min=-1.7137)
+      [17:43:57] Sampling 200 random directions...
+      [17:44:01] 50/200 dirs, 0 revival so far
+      [17:44:04] 100/200 dirs, 0 revival so far
+      [17:44:08] 150/200 dirs, 0 revival so far
+      [17:44:11] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [8/55] as/w5/S23 (L*=1.4018, lambda_min=-6.2973)
+      [17:44:11] Sampling 200 random directions...
+      [17:44:14] 50/200 dirs, 0 revival so far
+      [17:44:18] 100/200 dirs, 0 revival so far
+      [17:44:21] 150/200 dirs, 0 revival so far
+      [17:44:24] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [9/55] as/w5/S1234 (L*=1.4561, lambda_min=-2.5741)
+      [17:44:24] Sampling 200 random directions...
+      [17:44:28] 50/200 dirs, 0 revival so far
+      [17:44:31] 100/200 dirs, 0 revival so far
+      [17:44:34] 150/200 dirs, 0 revival so far
+      [17:44:37] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [10/55] as/w5/S023 (L*=1.5055, lambda_min=-2.2991)
+      [17:44:38] Sampling 200 random directions...
+      [17:44:41] 50/200 dirs, 0 revival so far
+      [17:44:44] 100/200 dirs, 0 revival so far
+      [17:44:47] 150/200 dirs, 0 revival so far
+      [17:44:51] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [11/55] asbs/w5/S4 (L*=0.3734, lambda_min=-38.1807)
+      [17:44:51] Sampling 200 random directions...
+      [17:44:54] 50/200 dirs, 0 revival so far
+      [17:44:57] 100/200 dirs, 0 revival so far
+      [17:45:01] 150/200 dirs, 0 revival so far
+      [17:45:04] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [12/55] asbs/w5/S3 (L*=0.3902, lambda_min=-31.3893)
+      [17:45:04] Sampling 200 random directions...
+      [17:45:07] 50/200 dirs, 0 revival so far
+      [17:45:11] 100/200 dirs, 0 revival so far
+      [17:45:14] 150/200 dirs, 0 revival so far
+      [17:45:17] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [13/55] asbs/w5/S2 (L*=0.3971, lambda_min=-32.0906)
+      [17:45:17] Sampling 200 random directions...
+      [17:45:21] 50/200 dirs, 0 revival so far
+      [17:45:24] 100/200 dirs, 0 revival so far
+      [17:45:27] 150/200 dirs, 0 revival so far
+      [17:45:31] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [14/55] asbs/w5/S012 (L*=0.5911, lambda_min=-16.0058)
+      [17:45:31] Sampling 200 random directions...
+      [17:45:34] 50/200 dirs, 0 revival so far
+      [17:45:37] 100/200 dirs, 0 revival so far
+      [17:45:41] 150/200 dirs, 0 revival so far
+      [17:45:44] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [15/55] asbs/w5/S014 (L*=0.5947, lambda_min=-19.5982)
+      [17:45:44] Sampling 200 random directions...
+      [17:45:48] 50/200 dirs, 0 revival so far
+      [17:45:51] 100/200 dirs, 0 revival so far
+      [17:45:55] 150/200 dirs, 0 revival so far
+      [17:45:58] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [16/55] asbs/w5/S0134 (L*=0.6064, lambda_min=-13.0394)
+      [17:45:58] Sampling 200 random directions...
+      [17:46:01] 50/200 dirs, 0 revival so far
+      [17:46:05] 100/200 dirs, 0 revival so far
+      [17:46:08] 150/200 dirs, 0 revival so far
+      [17:46:11] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [17/55] asbs/w5/S04 (L*=0.6421, lambda_min=-35.5486)
+      [17:46:11] Sampling 200 random directions...
+      [17:46:15] 50/200 dirs, 0 revival so far
+      [17:46:18] 100/200 dirs, 0 revival so far
+      [17:46:21] 150/200 dirs, 0 revival so far
+      [17:46:25] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [18/55] asbs/w5/S0234 (L*=1.1900, lambda_min=-17.2509)
+      [17:46:25] Sampling 200 random directions...
+      [17:46:28] 50/200 dirs, 0 revival so far
+      [17:46:31] 100/200 dirs, 0 revival so far
+      [17:46:35] 150/200 dirs, 0 revival so far
+      [17:46:38] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [19/55] asbs/w5/S1234 (L*=1.2080, lambda_min=-16.1048)
+      [17:46:38] Sampling 200 random directions...
+      [17:46:41] 50/200 dirs, 0 revival so far
+      [17:46:45] 100/200 dirs, 0 revival so far
+      [17:46:48] 150/200 dirs, 0 revival so far
+      [17:46:51] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [20/55] asbs/w5/S23 (L*=2.1536, lambda_min=-43.1008)
+      [17:46:51] Sampling 200 random directions...
+      [17:46:55] 50/200 dirs, 0 revival so far
+      [17:46:58] 100/200 dirs, 0 revival so far
+      [17:47:01] 150/200 dirs, 0 revival so far
+      [17:47:05] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [21/55] as/c5/S2 (L*=0.3631, lambda_min=-2.3716)
+      [17:47:05] Sampling 200 random directions...
+      [17:47:08] 50/200 dirs, 0 revival so far
+      [17:47:11] 100/200 dirs, 0 revival so far
+      [17:47:15] 150/200 dirs, 0 revival so far
+      [17:47:18] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [22/55] as/c5/S1 (L*=0.3745, lambda_min=-9.5667)
+      [17:47:18] Sampling 200 random directions...
+      [17:47:21] 50/200 dirs, 0 revival so far
+      [17:47:25] 100/200 dirs, 0 revival so far
+      [17:47:28] 150/200 dirs, 0 revival so far
+      [17:47:31] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [23/55] as/c5/S0 (L*=0.4177, lambda_min=-4.6642)
+      [17:47:31] Sampling 200 random directions...
+      [17:47:35] 50/200 dirs, 0 revival so far
+      [17:47:38] 100/200 dirs, 0 revival so far
+      [17:47:42] 150/200 dirs, 0 revival so far
+      [17:47:45] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [24/55] as/c5/S013 (L*=0.5924, lambda_min=-3.9054)
+      [17:47:45] Sampling 200 random directions...
+      [17:47:48] 50/200 dirs, 0 revival so far
+      [17:47:52] 100/200 dirs, 0 revival so far
+      [17:47:55] 150/200 dirs, 0 revival so far
+      [17:47:58] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [25/55] as/c5/S123 (L*=0.5930, lambda_min=-1.1953)
+      [17:47:58] Sampling 200 random directions...
+      [17:48:02] 50/200 dirs, 0 revival so far
+      [17:48:05] 100/200 dirs, 0 revival so far
+      [17:48:09] 150/200 dirs, 0 revival so far
+      [17:48:12] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [26/55] as/c5/S014 (L*=0.5933, lambda_min=-6.7096)
+      [17:48:12] Sampling 200 random directions...
+      [17:48:15] 50/200 dirs, 0 revival so far
+      [17:48:19] 100/200 dirs, 0 revival so far
+      [17:48:22] 150/200 dirs, 0 revival so far
+      [17:48:25] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [27/55] as/c5/S1234 (L*=0.5936, lambda_min=-1.0404)
+      [17:48:25] Sampling 200 random directions...
+      [17:48:29] 50/200 dirs, 0 revival so far
+      [17:48:32] 100/200 dirs, 0 revival so far
+      [17:48:35] 150/200 dirs, 0 revival so far
+      [17:48:39] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [28/55] as/c5/S4 (L*=51.4177, lambda_min=-351.6991)
+      [17:48:39] Sampling 200 random directions...
+      [17:48:42] 50/200 dirs, 0 revival so far
+      [17:48:45] 100/200 dirs, 0 revival so far
+      [17:48:49] 150/200 dirs, 0 revival so far
+      [17:48:52] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [29/55] as/c5/S3 (L*=89.9712, lambda_min=-162.7525)
+      [17:48:52] Sampling 200 random directions...
+      [17:48:56] 50/200 dirs, 0 revival so far
+      [17:48:59] 100/200 dirs, 0 revival so far
+      [17:49:02] 150/200 dirs, 0 revival so far
+      [17:49:06] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [30/55] as/c5/S34 (L*=1570.8945, lambda_min=-306.8571)
+      [17:49:06] Sampling 200 random directions...
+      [17:49:09] 50/200 dirs, 0 revival so far
+      [17:49:13] 100/200 dirs, 0 revival so far
+      [17:49:16] 150/200 dirs, 0 revival so far
+      [17:49:19] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [31/55] asbs/c5/S2 (L*=0.3971, lambda_min=-32.2149)
+      [17:49:20] Sampling 200 random directions...
+      [17:49:23] 50/200 dirs, 0 revival so far
+      [17:49:26] 100/200 dirs, 0 revival so far
+      [17:49:30] 150/200 dirs, 0 revival so far
+      [17:49:33] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [32/55] asbs/c5/S1 (L*=0.4184, lambda_min=-41.5231)
+      [17:49:33] Sampling 200 random directions...
+      [17:49:37] 50/200 dirs, 0 revival so far
+      [17:49:40] 100/200 dirs, 0 revival so far
+      [17:49:43] 150/200 dirs, 0 revival so far
+      [17:49:47] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [33/55] asbs/c5/S0 (L*=0.4248, lambda_min=-40.9878)
+      [17:49:47] Sampling 200 random directions...
+      [17:49:50] 50/200 dirs, 0 revival so far
+      [17:49:54] 100/200 dirs, 0 revival so far
+      [17:49:57] 150/200 dirs, 0 revival so far
+      [17:50:01] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [34/55] asbs/c5/S1234 (L*=0.5420, lambda_min=-28.6497)
+      [17:50:01] Sampling 200 random directions...
+      [17:50:04] 50/200 dirs, 0 revival so far
+      [17:50:07] 100/200 dirs, 0 revival so far
+      [17:50:11] 150/200 dirs, 0 revival so far
+      [17:50:14] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [35/55] asbs/c5/S124 (L*=0.5435, lambda_min=-25.2118)
+      [17:50:14] Sampling 200 random directions...
+      [17:50:18] 50/200 dirs, 0 revival so far
+      [17:50:21] 100/200 dirs, 0 revival so far
+      [17:50:24] 150/200 dirs, 0 revival so far
+      [17:50:28] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [36/55] asbs/c5/S12 (L*=0.5683, lambda_min=-29.8599)
+      [17:50:28] Sampling 200 random directions...
+      [17:50:31] 50/200 dirs, 0 revival so far
+      [17:50:35] 100/200 dirs, 0 revival so far
+      [17:50:38] 150/200 dirs, 0 revival so far
+      [17:50:41] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [37/55] asbs/c5/S0123 (L*=0.5798, lambda_min=-14.5607)
+      [17:50:41] Sampling 200 random directions...
+      [17:50:45] 50/200 dirs, 0 revival so far
+      [17:50:48] 100/200 dirs, 0 revival so far
+      [17:50:51] 150/200 dirs, 0 revival so far
+      [17:50:55] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [38/55] asbs/c5/S34 (L*=50.0355, lambda_min=-247.9976)
+      [17:50:55] Sampling 200 random directions...
+      [17:50:58] 50/200 dirs, 0 revival so far
+      [17:51:02] 100/200 dirs, 0 revival so far
+      [17:51:05] 150/200 dirs, 0 revival so far
+      [17:51:09] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [39/55] asbs/c5/S4 (L*=51.1068, lambda_min=-133.0177)
+      [17:51:09] Sampling 200 random directions...
+      [17:51:12] 50/200 dirs, 0 revival so far
+      [17:51:15] 100/200 dirs, 0 revival so far
+      [17:51:19] 150/200 dirs, 0 revival so far
+      [17:51:22] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [40/55] asbs/c5/S3 (L*=90.8883, lambda_min=-99.2648)
+      [17:51:22] Sampling 200 random directions...
+      [17:51:26] 50/200 dirs, 0 revival so far
+      [17:51:29] 100/200 dirs, 0 revival so far
+      [17:51:32] 150/200 dirs, 0 revival so far
+      [17:51:36] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [41/55] as/b5/S3 (L*=0.4332, lambda_min=-2.5643)
+      [17:51:36] Sampling 200 random directions...
+      [17:51:39] 50/200 dirs, 0 revival so far
+      [17:51:42] 100/200 dirs, 0 revival so far
+      [17:51:46] 150/200 dirs, 0 revival so far
+      [17:51:49] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [42/55] as/b5/S12 (L*=0.4202, lambda_min=-1.1417)
+      [17:51:49] Sampling 200 random directions...
+      [17:51:53] 50/200 dirs, 0 revival so far
+      [17:51:56] 100/200 dirs, 0 revival so far
+      [17:51:59] 150/200 dirs, 0 revival so far
+      [17:52:03] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [43/55] as/b5/S124 (L*=0.4247, lambda_min=-1.1039)
+      [17:52:03] Sampling 200 random directions...
+      [17:52:06] 50/200 dirs, 0 revival so far
+      [17:52:10] 100/200 dirs, 0 revival so far
+      [17:52:13] 150/200 dirs, 0 revival so far
+      [17:52:16] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [44/55] as/b5/S1234 (L*=0.4266, lambda_min=-1.1047)
+      [17:52:16] Sampling 200 random directions...
+      [17:52:20] 50/200 dirs, 0 revival so far
+      [17:52:23] 100/200 dirs, 0 revival so far
+      [17:52:27] 150/200 dirs, 0 revival so far
+      [17:52:30] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [45/55] as/b5/S0123 (L*=0.4293, lambda_min=-0.2659)
+      [17:52:30] Sampling 200 random directions...
+      [17:52:33] 50/200 dirs, 0 revival so far
+      [17:52:37] 100/200 dirs, 0 revival so far
+      [17:52:40] 150/200 dirs, 0 revival so far
+      [17:52:44] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [46/55] as/b5/S024 (L*=0.4906, lambda_min=-1.3387)
+      [17:52:44] Sampling 200 random directions...
+      [17:52:47] 50/200 dirs, 1 revival so far
+      [17:52:50] 100/200 dirs, 7 revival so far
+      [17:52:54] 150/200 dirs, 8 revival so far
+      [17:52:57] 200/200 dirs, 11 revival so far
+      [17:52:57] Running projected Lanczos (dim=11)...
+      lambda_min_rev = -0.000401
+
+  [47/55] as/b5/S4 (L*=0.6020, lambda_min=-3.2071)
+      [17:53:04] Sampling 200 random directions...
+      [17:53:07] 50/200 dirs, 0 revival so far
+      [17:53:11] 100/200 dirs, 0 revival so far
+      [17:53:14] 150/200 dirs, 0 revival so far
+      [17:53:17] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [48/55] as/b5/S34 (L*=0.6339, lambda_min=-2.0904)
+      [17:53:17] Sampling 200 random directions...
+      [17:53:21] 50/200 dirs, 0 revival so far
+      [17:53:24] 100/200 dirs, 0 revival so far
+      [17:53:27] 150/200 dirs, 0 revival so far
+      [17:53:31] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [49/55] asbs/b5/S124 (L*=0.4087, lambda_min=-1.1953)
+      [17:53:31] Sampling 200 random directions...
+      [17:53:34] 50/200 dirs, 0 revival so far
+      [17:53:37] 100/200 dirs, 1 revival so far
+      [17:53:41] 150/200 dirs, 1 revival so far
+      [17:53:44] 200/200 dirs, 2 revival so far
+      [17:53:44] Running projected Lanczos (dim=2)...
+      lambda_min_rev = 0.000261
+
+  [50/55] asbs/b5/S123 (L*=0.4093, lambda_min=-1.1539)
+      [17:53:45] Sampling 200 random directions...
+      [17:53:49] 50/200 dirs, 0 revival so far
+      [17:53:52] 100/200 dirs, 1 revival so far
+      [17:53:56] 150/200 dirs, 1 revival so far
+      [17:53:59] 200/200 dirs, 1 revival so far
+      Revival dim=1 < 2, skipping projected Lanczos
+
+  [51/55] asbs/b5/S1234 (L*=0.4107, lambda_min=-1.2273)
+      [17:53:59] Sampling 200 random directions...
+      [17:54:02] 50/200 dirs, 2 revival so far
+      [17:54:06] 100/200 dirs, 2 revival so far
+      [17:54:09] 150/200 dirs, 2 revival so far
+      [17:54:13] 200/200 dirs, 4 revival so far
+      [17:54:13] Running projected Lanczos (dim=4)...
+      lambda_min_rev = 0.000135
+
+  [52/55] asbs/b5/S0123 (L*=0.4117, lambda_min=-1.5180)
+      [17:54:15] Sampling 200 random directions...
+      [17:54:19] 50/200 dirs, 0 revival so far
+      [17:54:22] 100/200 dirs, 0 revival so far
+      [17:54:25] 150/200 dirs, 0 revival so far
+      [17:54:29] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [53/55] asbs/b5/S0234 (L*=0.4956, lambda_min=-2.6993)
+      [17:54:29] Sampling 200 random directions...
+      [17:54:32] 50/200 dirs, 11 revival so far
+      [17:54:36] 100/200 dirs, 18 revival so far
+      [17:54:39] 150/200 dirs, 26 revival so far
+      [17:54:42] 200/200 dirs, 34 revival so far
+      [17:54:43] Running projected Lanczos (dim=34)...
+      lambda_min_rev = -0.002155
+
+  [54/55] asbs/b5/S3 (L*=0.5434, lambda_min=-123.4399)
+      [17:55:00] Sampling 200 random directions...
+      [17:55:04] 50/200 dirs, 0 revival so far
+      [17:55:07] 100/200 dirs, 0 revival so far
+      [17:55:11] 150/200 dirs, 0 revival so far
+      [17:55:14] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+  [55/55] asbs/b5/S34 (L*=0.6228, lambda_min=-48.6488)
+      [17:55:14] Sampling 200 random directions...
+      [17:55:17] 50/200 dirs, 0 revival so far
+      [17:55:21] 100/200 dirs, 0 revival so far
+      [17:55:24] 150/200 dirs, 0 revival so far
+      [17:55:27] 200/200 dirs, 0 revival so far
+      Revival dim=0 < 2, skipping projected Lanczos
+
+[17:55:27] Saved: /home/sky/SML/SOC_MC/evaluation/tables/goal3_revival_projection.csv (55 rows)
+  Figure saved: /home/sky/SML/SOC_MC/evaluation/figures/goal3_loss_vs_lambda_min_rev.png
+
+============================================================
+STAGE 3 SUMMARY
+============================================================
+  Checkpoints with revival subspace (dim>=2): 4/55
+  Checkpoints without revival subspace: 51/55
+  Revival dim: mean=12.8, max=34
+  Negative lambda_min_rev: 2/4
+
+[17:55:28] Done.

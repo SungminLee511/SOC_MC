@@ -1,0 +1,24 @@
+benchmark:
+  config: benchmark/configs/w5.yaml
+goal: 1
+init:
+  from_checkpoint: null
+  noise_level: 0.0
+logging:
+  checkpoint_every: 500
+  eval_every: 0
+  n_eval_samples: 10000
+model:
+  config: model/configs/as_default.yaml
+n_epochs: 500
+output:
+  checkpoint_dir: result/checkpoints/goal1_as_w5_S034_pretrain_seed0/
+  log_file: result/logs/goal1_as_w5_S034_pretrain_seed0.csv
+seed: 0
+stage: pretrain
+subset:
+  S:
+  - 0
+  - 3
+  - 4
+  full_target: false

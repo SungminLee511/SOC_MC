@@ -1,0 +1,28 @@
+# Goal 1 Ablation 1.1: Init noise eta=0.01 — ASBS on B5, S=[0, 1]
+goal: 1
+stage: stability
+seed: 4
+n_epochs: 200
+
+model:
+  config: model/configs/asbs_default.yaml
+
+benchmark:
+  config: benchmark/configs/b5.yaml
+
+subset:
+  S: [0, 1]
+  full_target: true
+
+init:
+  from_checkpoint: result/checkpoints/goal1_asbs_b5_S01_pretrain_seed0/epoch_500.pt
+  noise_level: 0.01
+
+logging:
+  checkpoint_every: 40
+  eval_every: 20
+  n_eval_samples: 10000
+
+output:
+  checkpoint_dir: result/checkpoints/goal1_asbs_b5_S01_noise001_seed4/
+  log_file: result/logs/goal1_asbs_b5_S01_noise001_seed4.csv

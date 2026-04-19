@@ -1,0 +1,28 @@
+# Goal 1 Stage 2: Stability test — AS on B5, init from S=[1] pretrain
+goal: 1
+stage: stability
+seed: 3
+n_epochs: 200
+
+model:
+  config: model/configs/as_default.yaml
+
+benchmark:
+  config: benchmark/configs/b5.yaml
+
+subset:
+  S: [1]
+  full_target: true
+
+init:
+  from_checkpoint: result/checkpoints/goal1_as_b5_S1_pretrain_seed0/epoch_500.pt
+  noise_level: 0.0
+
+logging:
+  checkpoint_every: 40
+  eval_every: 20
+  n_eval_samples: 10000
+
+output:
+  checkpoint_dir: result/checkpoints/goal1_as_b5_S1_stability_seed3/
+  log_file: result/logs/goal1_as_b5_S1_stability_seed3.csv
