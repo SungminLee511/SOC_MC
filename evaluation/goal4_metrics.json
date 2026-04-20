@@ -1,0 +1,18 @@
+{
+  "n_checkpoints": 55,
+  "n_checkpoints_with_revival": 0,
+  "total_directions": 11000,
+  "total_revival_directions": 0,
+  "revival_fraction": 0.0,
+  "c_u_emp_mean": null,
+  "c_u_emp_median": null,
+  "c_u_emp_min": null,
+  "violation_frac_mean": null,
+  "violation_frac_max": null,
+  "g_max": 3.0,
+  "epsilon_pert": 0.05,
+  "n_dir": 200,
+  "n_traj": 1000,
+  "n_eval": 10000,
+  "dead_threshold": 0.005
+}

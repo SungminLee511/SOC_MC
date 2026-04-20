@@ -1,0 +1,29 @@
+benchmark:
+  config: benchmark/configs/w5.yaml
+goal: 5
+init:
+  from_checkpoint: result/checkpoints/goal1_as_w5_S1_pretrain_seed0/epoch_500.pt
+  noise_level: 0.0
+logging:
+  checkpoint_every: 300
+  eval_every: 20
+  n_eval_samples: 10000
+model:
+  config: model/configs/as_default.yaml
+n_epochs: 300
+optimizer:
+  momentum: 0.9
+  name: sgd
+output:
+  checkpoint_dir: result/checkpoints/goal5abl_as_w5_S1_opt_sgd_mom_seed2/
+  log_file: result/logs/goal5abl_as_w5_S1_opt_sgd_mom_seed2.csv
+seed: 2
+stage: ablation
+subset:
+  S:
+  - 1
+  full_target: true
+training:
+  batch_size: 256
+  override_lr: 0.002404679496907703
+  schedule: constant

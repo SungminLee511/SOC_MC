@@ -1,0 +1,28 @@
+benchmark:
+  config: benchmark/configs/w5.yaml
+goal: 5
+init:
+  from_checkpoint: result/checkpoints/goal1_as_w5_S0_pretrain_seed0/epoch_500.pt
+  noise_level: 0.0
+logging:
+  checkpoint_every: 300
+  eval_every: 20
+  n_eval_samples: 10000
+model:
+  config: model/configs/as_default.yaml
+n_epochs: 300
+optimizer:
+  name: adam
+output:
+  checkpoint_dir: result/checkpoints/goal5abl_as_w5_S0_bs64_seed0/
+  log_file: result/logs/goal5abl_as_w5_S0_bs64_seed0.csv
+seed: 0
+stage: ablation
+subset:
+  S:
+  - 0
+  full_target: true
+training:
+  batch_size: 64
+  override_lr: 0.0021505878807337305
+  schedule: constant
